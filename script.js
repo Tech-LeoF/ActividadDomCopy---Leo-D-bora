@@ -26,7 +26,17 @@ btn2.innerHTML = "¡Haz click para ver los consejos!";
 
 document.getElementById("contenido").appendChild(btn2);
 
-
+btn2.addEventListener("click", function () {
+    if (contador < mensajes.length){
+        let nuevoParrafo = document.createElement("p");
+    nuevoParrafo.textContent = `${contador + 1} - ${mensajes[contador]}`
+    document.getElementById("contenido").appendChild(nuevoParrafo);
+    contador++;
+    }else{
+        alert("Ya te dimos todos los consejos que pudimos 😁, ¡así que disfruta!")
+    };
+    
+});
 
 
 
